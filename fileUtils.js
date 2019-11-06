@@ -8,8 +8,8 @@ let testFile = (filename) => {
 }
 
 // this won't scale well. If we need to process any
-// large input files, we will need to us an async method
-let readFromFileBlocking = (filename, handler) => {
+// large input files, we will need to parse in the file line by line
+let readFromFileBlocking = (filename) => {
     return fs.readFileSync(filename, 'utf8').split('\n');
 }
 
